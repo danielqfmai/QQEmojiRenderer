@@ -1,4 +1,5 @@
-import * as emoji from "../scripts/emoji.mjs"
+// 相对于自己的路径
+import * as emoji from "../resources/emoji.mjs"
 
 const grid = document.querySelector('#img_grid');
 

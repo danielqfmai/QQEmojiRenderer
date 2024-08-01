@@ -291,5 +291,5 @@ export const keys = [
 
 // 获取图片标签
 export function getURL(key) {
-	return chrome.runtime.getURL(`assets/images/${key}.gif`);
+	return chrome.runtime.getURL(`resources/images/${key}.gif`);
 }

@@ -9,14 +9,17 @@
 	},
 	"web_accessible_resources": [
 		{
-			"resources" : ["/assets/images/*", "scripts/emoji.mjs"],
-			"matches": ["https://www.luogu.com.cn/*"]
+			"resources" : ["resources/*"],
+			"matches": ["https://*/*", "http://*/*"]
 		}
 	],
 	"content_scripts": [
 		{
-			"js": ["scripts/content.mjs"],
-			"matches": ["https://www.luogu.com.cn/*"]
+			"js": ["content/luogu.mjs"],
+			"matches": [
+				"https://www.luogu.com.cn/*",
+				"https://www.luogu.com/*"
+			]
 		}
 	]
 }
