@@ -1,0 +1,8 @@
+#emojiCompletion {
+	background-color: aliceblue;
+	width: 50px;
+	height: 200px;
+	margin-top: -200px;
+	position: absolute;
+	z-index: 1000;
+}

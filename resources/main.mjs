@@ -64,6 +64,49 @@ function replaceSubtree(element, filter) {
 	replaceList.forEach(r => r[0].replaceWith(r[1]));
 }
 
+var div;
+
+function handle(e) {
+	var divParent = div.parentNode;
+	var p;
+	if (e.target)
+		p = e.target.parentNode;
+	if (divParent && divParent != p) {
+		divParent.removeChild(div);
+		divParent = undefined;
+	}
+	if (!e.target) { // || e.target.tagName.toLowerCase() != 'textarea') {
+		return;
+	}
+	if (divParent)
+		p.insertBefore(div, e.target);
+	if (e.target.selectionStart == e.target.selectionEnd) {
+		console.log(1);
+		const i = e.target.selectionStart;
+		const s = e.target.value;
+		var j = i - 1;
+		while (j >= 0 && /\w/.test(s[j]))
+			--j;
+		if (j < 0 || s[j] != '/') return;
+		var k = i;
+		while (k < s.length && /\w/.test(s[k]))
+			++k;
+		console.log(s.substring(j, k));
+	}
+//	const s = window.getSelection();
+//	const r = s.getRangeAt(0).cloneRange();
+//	const span = document.createElement('span');
+//	span.appendChild(document.createTextNode("\u200b"));
+//	r.insertNode(span);
+//	const rect = span.getClientRects()[0];
+//	console.log(rect);
+//	div.style['top' ] = rect.top  + 'px';
+//	div.style['left'] = rect.left + 'px';
+//	const spanParent = span.parentNode;
+//	spanParent.removeChild(span);
+//	spanParent.normalize();
+}
+
 export function main(filter) {
 	replaceSubtree(document.body, filter);
 	const observer = new MutationObserver(mutations =>
@@ -77,4 +120,18 @@ export function main(filter) {
 		})
 	);
 	observer.observe(document.body, { childList: true, subtree: true });
+
+	const link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = chrome.runtime.getURL('resources/emojiCompletion.css');
+	document.head.appendChild(link);
+
+	div = document.createElement('div');
+	div.id = 'emojiCompletion';
+	div.innerHTML = 'abc';
+//	document.body.appendChild(div);
+
+	document.addEventListener('input', handle);
+	document.addEventListener('selectionchange', handle);
 }
