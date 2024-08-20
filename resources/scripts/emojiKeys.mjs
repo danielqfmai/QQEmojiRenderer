@@ -1,5 +1,5 @@
 // emoji 列表
-export const keys = [
+export default [
 	"ybyb",
 	"wosl",
 	"hs",
@@ -288,8 +288,3 @@ export const keys = [
 	"maj_97",
 	"maj_98"
 ];
-
-// 获取图片标签
-export function getURL(key) {
-	return chrome.runtime.getURL(`resources/images/${key}.gif`);
-}

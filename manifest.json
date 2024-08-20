@@ -2,24 +2,21 @@
 	"manifest_version": 3,
 	"name": "QQEmojiRenderer",
 	"description": "在浏览器中渲染QQ Emoji表情!",
-	"version": "1.0",
-	"permissions": ["activeTab"],
+	"version": "1.1",
+	"permissions": ["activeTab", "storage"],
 	"action": {
-	  "default_popup": "popup/popup.html"
+		"default_popup": "popup/popup.html"
 	},
 	"web_accessible_resources": [
 		{
-			"resources" : ["resources/*"],
-			"matches": ["https://*/*", "http://*/*"]
+			"resources" : [ "resources/*" ],
+			"matches": ["*://*/*"]
 		}
 	],
 	"content_scripts": [
 		{
-			"js": ["content/luogu.mjs"],
-			"matches": [
-				"https://www.luogu.com.cn/*",
-				"https://www.luogu.com/*"
-			]
+			"js": ["content.mjs"],
+			"matches": ["*://*/*"]
 		}
 	]
 }
