@@ -7,7 +7,7 @@ function main() {
 		if (key) {
 			imgs[i].addEventListener('click', e => {
 				navigator.clipboard.writeText(key);
-				alert(`已复制emoji(${key})`);
+				localStorage.setItem('QQEmojiRenderer', `已复制emoji(${key})`)
 			});
 		}
 		const x = window.getComputedStyle(imgs[i])['font-size'];
