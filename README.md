@@ -2,6 +2,16 @@
 
 ~~省流：套壳软件~~
 
+## Missing Emoji Notice 寻图启事
+
+Some Emojis are commented in [resources/scripts/emojiKeys.mjs](resources/scripts/emojiKeys.mjs) because I can't find any corresponding image.
+
+If you have any of them, please add it into [resources/images/](resources/images/).
+
+[resources/scripts/emojiKeys.mjs](resources/scripts/emojiKeys.mjs) 里有些行被注释了因为我找不到对应的图片。
+
+如果你有，请将其加入 [resources/images/](resources/images/).
+
 ## Usage
 
 ### Installation
