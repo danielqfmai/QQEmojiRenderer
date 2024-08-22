@@ -9,15 +9,15 @@ link.setAttribute('rel', 'stylesheet');
 link.setAttribute('href', chrome.runtime.getURL('resources/content.css'));
 document.head.appendChild(link);
 
-// 添加 sweet alert 2
-const script = document.createElement('script');
-script.setAttribute('src', chrome.runtime.getURL('resources/sweetalert2/sweetalert2.all.mjs'));
-document.head.appendChild(script);
+//const script = document.createElement('script');
+//script.setAttribute('src', chrome.runtime.getURL('resources/sweetalert2/sweetalert2.all.mjs'));
+//document.head.appendChild(script);
+//
+//const script2 = document.createElement('script');
+//script2.setAttribute('src', chrome.runtime.getURL('resources/scripts/showToast.mjs'));
+//document.head.appendChild(script2);
 
-const script2 = document.createElement('script');
-script2.setAttribute('src', chrome.runtime.getURL('resources/scripts/showToast.mjs'));
-document.head.appendChild(script2);
-
+//injectJS('resources/scripts/showToast.mjs');
 injectJS('resources/scripts/handleImg.mjs');
 injectJS('resources/scripts/autoComplete.mjs').then(module => module.default());
 injectJS('resources/scripts/replace.mjs');

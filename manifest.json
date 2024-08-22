@@ -9,7 +9,7 @@
 	},
 	"web_accessible_resources": [
 		{
-			"resources" : [ "resources/*" ],
+			"resources" : ["resources/*", "sweetalert2/src/*"],
 			"matches": ["*://*/*"]
 		}
 	],
