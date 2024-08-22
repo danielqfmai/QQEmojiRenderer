@@ -9,7 +9,7 @@
 1. Download [QQEmojiRenderer.zip](https://github.com/danielqfmai/QQEmojiRenderer/archive/refs/heads/master.zip) or clone this repository.
 2. Unzip the file.
 3. Run `download_requirements.sh`.
-  - For windows, rename `download_requirements.sh` to `download_requirements.bat` and run it.
+    - For windows, rename `download_requirements.sh` to `download_requirements.bat` and run it.
 4. Open the extensions page in your browser.
 5. Enable developer mode.
 6. Drag the folder into the page.
