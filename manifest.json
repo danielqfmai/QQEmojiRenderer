@@ -18,5 +18,8 @@
 			"js": ["content.mjs"],
 			"matches": ["*://*/*"]
 		}
+	],
+	"host_permissions": [
+		"https://cdn.jsdelivr.net/*"
 	]
 }

@@ -1,6 +1,7 @@
+import injectCSS from './injectCSS.mjs';
 import emojiKeys from './emojiKeys.mjs';
 import getImg from './getImg.mjs';
-import './tribute.mjs';
+import './tribute.min.js';
 
 // 为文本框添加自动补全
 function doAttach(tribute) {
@@ -14,14 +15,10 @@ function doAttach(tribute) {
 }
 
 export default (posMenu) => {
-	// 添加 css
-	const link = document.createElement('link');
-	link.setAttribute('rel', 'stylesheet');
-	link.setAttribute('href',
-			chrome.runtime.getURL('resources/tribute.css'));
-	document.head.appendChild(link);
+	injectCSS('resources/styles/tribute.css');
 
 	// 生成 tribute
+	console.log(Tribute);
 	var tribute = new Tribute({
 		requireLeadingSpace: false,
 		positionMenu: posMenu,

@@ -1,16 +1,18 @@
-import Swal from '../../sweetalert2/src/sweetalert2.js';
+import './sweetalert2.min.js';
+// 要用 Sweetalert2 不要用 Swal
+
 
 function showToast(key) {
 	navigator.clipboard.writeText(key);
-	Swal.fire({
+	Sweetalert2.fire({
 		toast: true,
 		position: "top-end",
 		showConfirmButton: false,
 		timer: 3000,
 		timerProgressBar: true,
 		didOpen: toast => {
-			toast.onmouseenter = Swal.stopTimer;
-			toast.onmouseleave = Swal.resumeTimer;
+			toast.onmouseenter = Sweetalert2.stopTimer;
+			toast.onmouseleave = Sweetalert2.resumeTimer;
 		},
 		icon: "info",
 		title: `已复制emoji(${key})`,

@@ -2,25 +2,16 @@
 
 ~~省流：套壳软件~~
 
-## Missing Emoji Notice 寻图启事
-
-Some Emojis are commented in [resources/scripts/emojiKeys.mjs](resources/scripts/emojiKeys.mjs) because I can't find any corresponding image.
-
-If you have any of them, please add it into [resources/images/](resources/images/).
-
-[resources/scripts/emojiKeys.mjs](resources/scripts/emojiKeys.mjs) 里有些行被注释了因为我找不到对应的图片。
-
-如果你有，请将其加入 [resources/images/](resources/images/).
-
 ## Usage
 
 ### Installation
 
-1. Download [QQEmojiRenderer.zip](https://github.com/danielqfmai/QQEmojiRenderer/archive/refs/heads/master.zip).
+1. Download [QQEmojiRenderer.zip](https://github.com/danielqfmai/QQEmojiRenderer/archive/refs/heads/master.zip) or clone this repository.
 2. Unzip the file.
-3. Open the extensions page in your browser.
-4. Enable developer mode.
-5. Drag the folder into the page.
+3. Run `download_requirements.sh`.
+4. Open the extensions page in your browser.
+5. Enable developer mode.
+6. Drag the folder into the page.
 
 ### Features
 

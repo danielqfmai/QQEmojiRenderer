@@ -1,2 +1,4 @@
 **/*Zone.Identifier
 **/*.un~
+resources/scripts/*.min.js
+resources/styles/*.min.css
